@@ -1,0 +1,185 @@
+
+.column{
+    float: left;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+.row{
+  content: "";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  clear: both;
+  width: 80%;
+  align-content: center;
+  table-layout: fixed;
+  margin-left: 10%;
+  border-collapse: separate;
+  border-spacing: 10px 0;
+}
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  align-items: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 24px;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+
+li a:hover {
+  background-color:black ;
+  color: rgb(96, 182, 236);
+  
+}
+.Login-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border: 5px  #333;;
+  border-width: 5px;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  height: 140px;
+  width: 400px;
+  float: none;
+  padding: 12px;
+  align-content: center;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.Register-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border: 5px  #333;;
+  border-width: 5px;
+  gap: 15px;
+  text-align: center;
+  height: 200px;
+  width: 400px;
+  float: none;
+  padding: 12px;
+  align-content: center;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.Ekipa{
+  padding: 12px;
+  align-content: center;
+  position: relative;
+  margin: auto;
+}
+
+h2{
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
+.Fill_turnir{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: right;
+}
+.EButton{
+  display: inline-block;
+  align-content: center;
+  margin: auto;
+  margin-top: 25px;
+  margin-left: 40%;
+  padding-left: 0%;
+  width: 20%;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition-duration: 0.3s;
+  border-color: #333;
+  border-radius: 12px;
+
+}
+.EButton:hover{
+  color: rgb(96, 182, 236);
+  background-color: black;
+}
+.button{
+  align-content: center;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition-duration: 0.3s;
+  border-color: #333;
+  border-radius: 12px;
+}
+.button:hover{
+  color: rgb(96, 182, 236);
+  background-color: black;
+}
+.TerminTxt{
+  font-size: medium;
+  margin: auto;
+  margin-top: 25px;
+  text-align: center;
+}
+.OButton{
+  display: block;
+  float: right;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition-duration: 0.3s;
+  border-color: #333;
+  border-radius: 12px;
+}
+.OButton:hover{
+  color: rgb(96, 182, 236);
+  background-color: black;
+}
+.UnesenoP{
+  text-align: center;
+  color: rgb(7, 97, 7);
+}
+
+.kolaDiv{
+  font-size: medium;
+  margin: auto;
+  text-align: center;
+}
+#prvaUtakmica{
+  margin: auto;
+  text-align: center;
+  padding-top: 15px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <ul>
+            <li><a href="dvorana.html">Dodaj dvoranu</a></li>
+            <li><a href="turnir.html">Stvori Turnir!</a></li>
+            <li style="padding: 14px;float: right;"><button onclick="Odjava()">Odjava</button></li>
+        </ul>
+
+        <div style="padding-top: 25px;">
+            <label style="font-size: big; padding: 20px;">Odaberi turnir koji želiš pogledati: </label>
+            <select id="turnir" onchange="Get_turnir()" ></select>
+            <div class="kolaDiv">
+                <h3 id="PKolo1"></h3  >
+                <p id="kolo1p"></p>
+                <h3 id="PKolo2"></h3>
+                <p id="kolo2p"></p>
+                <h3 id="PKolo3"></h3>
+                <p id="kolo3p"></p>
+            </div>
+        </div>
+        <script src="../script.js"></script>
+        <script>
+            fetchUserTournaments()
+        </script>
+    </body>
+</html>

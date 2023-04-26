@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../style.css">
+        
+       
+    </head>
+    <body>
+
+        
+        <ul>
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="dvorana.html">Dodaj dvoranu</a></li>
+            <li style="padding: 14px;float: right;"><button onclick="Odjava()">Odjava</button></li>
+        </ul>
+        <div class="Fill_turnir">
+            <label >Odaberi pobjednika 1. utakmice:</label>
+            <select id="pobjednik1" name="tjedan" >
+            </select>
+            <label>Odaberi pobjednika 2. utakmice:</label>
+            <select id="pobjednik2" name="tjedan" >
+            </select>
+            <label>Odaberi pobjednika 3. utakmice:</label>
+            <select id="pobjednik3" name="tjedan" >
+            </select>
+            <label >Odaberi pobjednika 4. utakmice:</label>
+            <select id="pobjednik4" name="tjedan" >
+            </select>
+            <p></p>
+            <button class="button" id="Unesi" onclick="Unesi_pobjednike(2)">Unesi pobjednike</button>
+            <label for="dvorane">Odaberi dvorane ovisno o prioritetu, 1. dvorana: </label>
+            <select id="dvorana1" onchange="" ></select>
+            <label for="dvorane">2. dvorana: </label>
+            <select id="dvorana2" onchange="" ></select>
+            <label for="dvorane">3. dvorana: </label>
+            <select id="dvorana3" onchange="" ></select>
+            <p></p>
+            <button class="button" id="buttonDvorana" onclick="AddPDvorana(1)">Unesi dvorane</button>
+            <p></p>
+            <p id="UneseneDvorane" class="UnesenoP"></p>
+        </div>
+        <div class="Ekipa">
+            <h2 id="ekipa1">Ekipa 1</h2>
+            <p class="TerminTxt">Unesi termine kada je ekipa slobodna:</p>
+            <div class="row">
+                <div class="column">
+                    <h3>Ponedjeljak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="0" class="ck1">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="1" class="ck1">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="2" class="ck1">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="3" class="ck1">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="4" class="ck1">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="5" class="ck1">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="6" class="ck1">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="7" class="ck1">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="8" class="ck1">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="9" class="ck1">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Utorak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="10" class="ck1">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="11" class="ck1">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="12" class="ck1">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="13" class="ck1">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="14" class="ck1">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="15" class="ck1">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="16" class="ck1">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="17" class="ck1">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="18" class="ck1">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="19" class="ck1">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Srijeda</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="20" class="ck1">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="21" class="ck1">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="22" class="ck1">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="3" class="ck1">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="24" class="ck1">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="25" class="ck1">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="26" class="ck1">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="27" class="ck1">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="28" class="ck1">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="29" class="ck1">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Četvrtak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="30" class="ck1">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="31" class="ck1">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="32" class="ck1">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="33" class="ck1">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="34" class="ck1">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="35" class="ck1">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="36" class="ck1">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="37" class="ck1">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="38" class="ck1">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="39" class="ck1">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Petak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="40" class="ck1">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="41" class="ck1">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="42" class="ck1">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="43" class="ck1">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="44" class="ck1">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="45" class="ck1">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="46" class="ck1">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="47" class="ck1">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="48" class="ck1">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="49" class="ck1">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Subota</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="50" class="ck1">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="51" class="ck1">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="52" class="ck1">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="53" class="ck1">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="54" class="ck1">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="55" class="ck1">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="56" class="ck1">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="57" class="ck1">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="58" class="ck1">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="59" class="ck1">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Nedjelja</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="60" class="ck1">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="61" class="ck1">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="62" class="ck1">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="63" class="ck1">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="64" class="ck1">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="65" class="ck1">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="66" class="ck1">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="67" class="ck1">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="68" class="ck1">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="69" class="ck1">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" onclick="funkcijaa2(1)" class="EButton">Unesi 1. ekipu</button>
+            
+            <p id="rjesenje1" class="UnesenoP"></p>
+        </div>
+        <div class="Ekipa">
+            <h2 id="ekipa2">Ekipa 2</h2>
+            <p class="TerminTxt">Unesi termine kada je ekipa slobodna:</p>
+            <div class="row">
+                <div class="column">
+                    <h3>Ponedjeljak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="0" class="ck2">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="1" class="ck2">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="2" class="ck2">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="3" class="ck2">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="4" class="ck2">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="5" class="ck2">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="6" class="ck2">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="7" class="ck2">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="8" class="ck2">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="9" class="ck2">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Utorak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="10" class="ck2">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="11" class="ck2">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="12" class="ck2">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="13" class="ck2">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="14" class="ck2">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="15" class="ck2">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="16" class="ck2">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="17" class="ck2">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="18" class="ck2">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="19" class="ck2">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Srijeda</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="20" class="ck2">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="21" class="ck2">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="22" class="ck2">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="3" class="ck2">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="24" class="ck2">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="25" class="ck2">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="26" class="ck2">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="27" class="ck2">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="28" class="ck2">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="29" class="ck2">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Četvrtak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="30" class="ck2">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="31" class="ck2">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="32" class="ck2">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="33" class="ck2">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="34" class="ck2">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="35" class="ck2">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="36" class="ck2">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="37" class="ck2">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="38" class="ck2">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="39" class="ck2">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Petak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="40" class="ck2">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="41" class="ck2">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="42" class="ck2">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="43" class="ck2">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="44" class="ck2">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="45" class="ck2">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="46" class="ck2">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="47" class="ck2">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="48" class="ck2">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="49" class="ck2">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Subota</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="50" class="ck2">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="51" class="ck2">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="52" class="ck2">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="53" class="ck2">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="54" class="ck2">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="55" class="ck2">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="56" class="ck2">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="57" class="ck2">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="58" class="ck2">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="59" class="ck2">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Nedjelja</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="60" class="ck2">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="61" class="ck2">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="62" class="ck2">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="63" class="ck2">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="64" class="ck2">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="65" class="ck2">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="66" class="ck2">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="67" class="ck2">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="68" class="ck2">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="69" class="ck2">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" onclick="funkcijaa2(2)" class="EButton">Unesi 2. ekipu</button>
+
+            <p id="rjesenje2" class="UnesenoP"></p>
+        </div>
+
+        <div class="Ekipa">
+            <h2 id="ekipa3">Ekipa 3</h2>
+            <p class="TerminTxt">Unesi termine kada je ekipa slobodna:</p>
+            <div class="row">
+                <div class="column">
+                    <h3>Ponedjeljak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="0" class="ck3">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="1" class="ck3">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="2" class="ck3">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="3" class="ck3">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="4" class="ck3">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="5" class="ck3">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="6" class="ck3">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="7" class="ck3">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="8" class="ck3">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="9" class="ck3">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Utorak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="10" class="ck3">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="11" class="ck3">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="12" class="ck3">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="13" class="ck3">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="14" class="ck3">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="15" class="ck3">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="16" class="ck3">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="17" class="ck3">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="18" class="ck3">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="19" class="ck3">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Srijeda</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="20" class="ck3">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="21" class="ck3">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="22" class="ck3">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="3" class="ck3">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="24" class="ck3">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="25" class="ck3">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="26" class="ck3">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="27" class="ck3">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="28" class="ck3">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="29" class="ck3">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Četvrtak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="30" class="ck3">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="31" class="ck3">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="32" class="ck3">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="33" class="ck3">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="34" class="ck3">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="35" class="ck3">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="36" class="ck3">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="37" class="ck3">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="38" class="ck3">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="39" class="ck3">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Petak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="40" class="ck3">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="41" class="ck3">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="42" class="ck3">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="43" class="ck3">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="44" class="ck3">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="45" class="ck3">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="46" class="ck3">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="47" class="ck3">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="48" class="ck3">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="49" class="ck3">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Subota</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="50" class="ck3">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="51" class="ck3">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="52" class="ck3">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="53" class="ck3">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="54" class="ck3">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="55" class="ck3">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="56" class="ck3">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="57" class="ck3">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="58" class="ck3">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="59" class="ck3">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Nedjelja</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="60" class="ck3">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="61" class="ck3">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="62" class="ck3">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="63" class="ck3">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="64" class="ck3">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="65" class="ck3">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="66" class="ck3">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="67" class="ck3">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="68" class="ck3">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="69" class="ck3">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" onclick="funkcijaa2(3)"class="EButton">Unesi 3. ekipu</button>
+
+            <p id="rjesenje3" class="UnesenoP"></p>
+        </div>
+
+        <div class="Ekipa">
+            <h2 id="ekipa4">Ekipa 4</h2>
+            <p class="TerminTxt">Unesi termine kada je ekipa slobodna:</p>
+            <div class="row">
+                <div class="column">
+                    <h3>Ponedjeljak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="0" class="ck4">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="1" class="ck4">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="2" class="ck4">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="3" class="ck4">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="4" class="ck4">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="5" class="ck4">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="6" class="ck4">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="7" class="ck4">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="8" class="ck4">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="9" class="ck4">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Utorak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="10" class="ck4">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="11" class="ck4">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="12" class="ck4">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="13" class="ck4">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="14" class="ck4">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="15" class="ck4">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="16" class="ck4">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="17" class="ck4">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="18" class="ck4">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="19" class="ck4">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Srijeda</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="20" class="ck4">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="21" class="ck4">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="22" class="ck4">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="3" class="ck4">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="24" class="ck4">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="25" class="ck4">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="26" class="ck4">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="27" class="ck4">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="28" class="ck4">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="29" class="ck4">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Četvrtak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="30" class="ck4">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="31" class="ck4">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="32" class="ck4">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="33" class="ck4">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="34" class="ck4">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="35" class="ck4">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="36" class="ck4">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="37" class="ck4">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="38" class="ck4">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="39" class="ck4">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Petak</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="40" class="ck4">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="41" class="ck4">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="42" class="ck4">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="43" class="ck4">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="44" class="ck4">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="45" class="ck4">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="46" class="ck4">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="47" class="ck4">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="48" class="ck4">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="49" class="ck4">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Subota</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="50" class="ck4">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="51" class="ck4">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="52" class="ck4">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="53" class="ck4">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="54" class="ck4">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="55" class="ck4">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="56" class="ck4">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="57" class="ck4">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="58" class="ck4">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="59" class="ck4">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Nedjelja</h3>
+                    <div>
+                        <input type="checkbox" value="1" id="60" class="ck4">
+                        <label for="0">8:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="61" class="ck4">
+                        <label for="1">9:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="62" class="ck4">
+                        <label for="2">11:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="63" class="ck4">
+                        <label for="3">12:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="64" class="ck4">
+                        <label for="4">14:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="65" class="ck4">
+                        <label for="5">15:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="66" class="ck4">
+                        <label for="5">17:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="67" class="ck4">
+                        <label for="5">18:30</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="68" class="ck4">
+                        <label for="5">20:00</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="1" id="69" class="ck4">
+                        <label for="5">21:30</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" onclick="funkcijaa2(4)" class="EButton">Unesi 4. ekipu</button>
+
+            <p id="rjesenje4" class="UnesenoP"></p>
+        </div>
+
+        <button class="button" type="button" onclick="algoritamRada(2)">Stvori turnir</button>
+        <button class="button" type="button" onclick="sljedeceKolo()">Kreiraj finale</button>
+        <p id="prvaUtakmica"></p>
+
+        <div id="bracket"></div>
+        <script src="../script.js"></script>
+        <script>
+            
+            function sljedeceKolo(){
+                console.log(noviTurnirId)
+                if(noviTurnirId == undefined){
+                    return
+                }
+                window.location = `/pages/kolo3.html?turnir=${noviTurnirId}`
+
+            }
+
+            function funkcijaa2(p1){
+                const ime = document.getElementById("ekipa"+p1);
+                var checkboxes = document.getElementsByClassName("ck"+p1);
+                var ukupno = [];
+                for(let i=0; i<checkboxes.length; i++){
+                    if(checkboxes[i].checked){
+                        ukupno.push(1);
+                    }
+                    else{
+                        ukupno.push(0);
+                    }
+                }
+                document.getElementById("rjesenje"+p1).innerHTML = "POPUNJENO";
+                if(p1==1){
+                    const ekipaP = new Ekipa(ukupno, ime.textContent, 0);
+                    ekipa1.CopyEkipa(ekipaP);
+                    if(ekipa1counter == 0){
+                        ekipe.push(ekipa1);
+                        ekipa1counter++;
+                    }
+                    
+                }
+                if(p1==2){
+                    const ekipaP = new Ekipa(ukupno, ime.textContent, 0);
+                    ekipa2.CopyEkipa(ekipaP);
+                    if(ekipa2counter == 0){
+                        ekipe.push(ekipa2);
+                        ekipa2counter++;
+                    }
+                }
+                if(p1==3){
+                    const ekipaP = new Ekipa(ukupno, ime.textContent, 0);
+                    ekipa3.CopyEkipa(ekipaP);
+                    if(ekipa3counter == 0){
+                        ekipe.push(ekipa3);
+                        ekipa3counter++;
+                    }
+                }
+                if(p1==4){
+                    const ekipaP = new Ekipa(ukupno, ime.textContent, 0);
+                    ekipa4.CopyEkipa(ekipaP);
+                    if(ekipa4counter == 0){
+                        ekipe.push(ekipa4);
+                        ekipa4counter++;
+                    }
+                }
+             
+            }
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString)
+            fetch(`http://localhost:3000/utakmica/${urlParams.get("turnir")}/1`).then((response) =>{
+                if(response.status == 200){
+                    response.json().then(data =>
+                        data.forEach((utakmica, index) => {
+                            const select = document.getElementById("pobjednik"+(index+1))
+
+                            const opt1 = document.createElement('option');
+                            opt1.setAttribute("value", utakmica.name_ekipe_1)
+                            opt1.innerHTML = utakmica.name_ekipe_1;
+                            select.appendChild(opt1);
+
+                            const opt2 = document.createElement('option');
+                            opt2.setAttribute("value", utakmica.name_ekipe_2)
+                            opt2.innerHTML = utakmica.name_ekipe_2;
+                            select.appendChild(opt2);
+
+                        })
+                    )
+                    //window.location = "pages/HomePage.html";
+                } else if(response.status == 400) {
+                    //const error = document.getElementById('error')
+                    //error.innerText = "Nisu uneseni svi podaci."
+                }
+            })
+        </script>
+    </body>
+</html>
